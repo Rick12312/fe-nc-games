@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { getReviewsById, patchVotes } from "../api/api";
+import { getReviewsById, patchVotes, getCommentsByReviewId } from "../api/api";
 import { BiUpvote } from "react-icons/bi";
-import { FaRegCommentDots } from 'react-icons/fa'
+import { FaCreativeCommonsSamplingPlus, FaRegCommentDots } from 'react-icons/fa'
 
 const SingleReview = () => {
   const [reviewId, setReviewId] = useState(1);
   const [review, setReview] = useState("");
+  const [comments, setComments] = useState("")
 
   const [loading, setIsLoading] = useState(true);
 
@@ -27,6 +28,13 @@ const SingleReview = () => {
       setReview(review)
     })
   }
+
+const fetchComments = () => {
+  getCommentsByReviewId(reviewId).then((comment) => {
+  setComments(comment)
+  })
+}
+console.log(comments)
 
   if (loading) return <p>Loading...</p>;
 
@@ -63,9 +71,15 @@ const SingleReview = () => {
         {review.review_id && <button onClick={onClick} className="SingleReview_review_vote_button">
           <BiUpvote />Vote
         </button>}
-        {review.review_id && <button className="SingleReview_review_comments_button">
+        {review.review_id && <button onClick={fetchComments} className="SingleReview_review_comments_button">
           <FaRegCommentDots />Show comments
         </button>}
+        {comments.map((comment) => {
+          return <> <p>{comment.votes}</p>
+          <p>{comment.author}</p>
+          <p>{comment.body}</p>
+          </>
+        })}
         
       </div>
     </div>

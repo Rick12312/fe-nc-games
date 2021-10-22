@@ -25,7 +25,6 @@ export const getReviewsById = async (review_id) => {
 }
 
 export const getReviewsByCategory = async (category) => {
-    console.log(category)
     const { data } = await gamesAPI.get(`/reviews/?category=${category}`)
     return data.reviews
 }
@@ -41,9 +40,12 @@ export const getReviewsBySort = async (sort) => {
 }
 
 export const patchVotes = async (review_id) => {
-    console.log(review_id)
     const { data } = await gamesAPI.patch(`/reviews/${review_id}`, { inc_votes : 1 })
-    console.log(data.review)
     return data.review
+}
 
+export const getCommentsByReviewId = async (review_id) => {
+    const { data } = await gamesAPI.get(`/reviews/${review_id}/comments`)
+    console.log(data.comments)
+    return data.comments
 }
