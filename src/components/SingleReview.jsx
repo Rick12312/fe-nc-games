@@ -8,9 +8,9 @@ const SingleReview = () => {
   const [reviewId, setReviewId] = useState(1);
   const [review, setReview] = useState("");
   const [comments, setComments] = useState("")
-  const [newComment, setNewComment] = useState({})
-
   const [loading, setIsLoading] = useState(true);
+  const [body, setBody] = useState("")
+  const [username, setUsername] = useState("")
 
   useEffect(() => {
     setIsLoading(false);
@@ -37,9 +37,8 @@ const fetchComments = () => {
 }
 
 const submitForm = () => {
-  postComments(reviewId, newComment).then((comment) => {
+  postComments(reviewId, username, body).then((comment) => {
     console.log(comment)
-    setComments(comment)
   })
 }
 
@@ -94,9 +93,11 @@ const submitForm = () => {
       {comments && <form onSubmit={submitForm}>
         <h2 className="SingleReview_comments_add_title">Post your comments here</h2>
         <p>Username</p>
-        <input type="text" placeholder="Enter username"/>
+        <input type="text" placeholder="Enter username" onChange={(e) => {setUsername(e.target.value)}}/>
         <p>Enter comment</p>
-        <input type="text" placeholder="Write your comment"/>
+        <input type="text" placeholder="Write your comment" onChange={(e) => {setBody(e.target.value)}}/>
+        <br></br>
+        <button>Submit</button>
       </form>}
       </div>
     </div>

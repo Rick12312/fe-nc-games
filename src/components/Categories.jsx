@@ -47,14 +47,7 @@ const Categories = () => {
           <p>Date Created: {review.created_at}</p>
           </li>
       })}
-      {categories.map(({ slug, description }) => {
-        return (
-          <>
-            <h2>{slug}</h2>
-            <p>{description}</p>
-          </>
-        );
-      })}
+     
     </div>
   );
 };

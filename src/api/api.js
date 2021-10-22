@@ -51,5 +51,6 @@ export const getCommentsByReviewId = async (review_id) => {
 }
 
 export const postComments = async (review_id, username, body) => {
-    
+    console.log(review_id, body, username)
+    const { data } = await gamesAPI.post(`/api/reviews/${review_id}/comments`, { username: `${username}`, body: `${body}`})
 }
