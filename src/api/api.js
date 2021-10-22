@@ -46,11 +46,11 @@ export const patchVotes = async (review_id) => {
 
 export const getCommentsByReviewId = async (review_id) => {
     const { data } = await gamesAPI.get(`/reviews/${review_id}/comments`)
-    console.log(data.comments)
     return data.comments
 }
 
 export const postComments = async (review_id, username, body) => {
-    console.log(review_id, body, username)
-    const { data } = await gamesAPI.post(`/api/reviews/${review_id}/comments`, { username: `${username}`, body: `${body}`})
+    console.log(review_id, body, username, { username: `${username}`, body: `${body}`})
+    const { data } = await gamesAPI.post(`/reviews/${review_id}/comments`, { username: `${username}`, body: `${body}`})
+    return data.comment
 }

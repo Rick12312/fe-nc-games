@@ -41,10 +41,8 @@ const Users = () => {
       <img className="Users_select_image" src={username.avatar_url} alt={username.username} />
       <div className="Users_select_container">
           {username.username && <p>Username: {username.username}</p>}
-          {username.name && <p className="Users_user_name">Name: {username.name}</p>}
+          {username.username && <p className="Users_user_name">Name: {username.name}</p>}
       </div>
-
-    
     </div>
   );
 };

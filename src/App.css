@@ -136,7 +136,7 @@
 }
 
 .Users_select {
-  border: 1px black solid;
+
 }
 
 .Users_select_container {
@@ -185,7 +185,7 @@
 .SingleReview_review_container {
   margin-top: 10px;
   margin-bottom: 10px;
-  max-width: 90vw;
+  max-width: 95vw;
   text-align: center;
   display: inline-block;
 }

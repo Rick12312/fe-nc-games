@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { getReviewsById, patchVotes, getCommentsByReviewId, postComments } from "../api/api";
 import { BiUpvote } from "react-icons/bi";
-import { FaCreativeCommonsSamplingPlus, FaRegCommentDots } from 'react-icons/fa'
+import { FaRegCommentDots } from 'react-icons/fa'
 
 const SingleReview = () => {
   const [reviewId, setReviewId] = useState(1);
@@ -36,7 +36,8 @@ const fetchComments = () => {
   })
 }
 
-const submitForm = () => {
+const submitForm = (e) => {
+  e.preventDefault()
   postComments(reviewId, username, body).then((comment) => {
     console.log(comment)
   })
@@ -84,7 +85,7 @@ const submitForm = () => {
       <div className="SingleReview_comments_container">
       {comments && comments.map((comment) => {
           return <> 
-          <p>Votes: {comment.votes}</p>
+          <p key={comment.comment_id}>Votes: {comment.votes}</p>
           <p>Username: {comment.author}</p>
           <p>{comment.body}</p>
           
@@ -93,11 +94,11 @@ const submitForm = () => {
       {comments && <form onSubmit={submitForm}>
         <h2 className="SingleReview_comments_add_title">Post your comments here</h2>
         <p>Username</p>
-        <input type="text" placeholder="Enter username" onChange={(e) => {setUsername(e.target.value)}}/>
+        <input type="text" placeholder="Enter username" required onChange={(e) => {setUsername(e.target.value)}}/>
         <p>Enter comment</p>
-        <input type="text" placeholder="Write your comment" onChange={(e) => {setBody(e.target.value)}}/>
+        <input type="text" placeholder="Write your comment" required onChange={(e) => {setBody(e.target.value)}}/>
         <br></br>
-        <button>Submit</button>
+        <button>Submit Post</button>
       </form>}
       </div>
     </div>

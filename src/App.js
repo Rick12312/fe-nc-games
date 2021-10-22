@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Users from "./components/Users";
+import Error from './components/Error';
 import SingleReview from "./components/SingleReview";
 import Categories from "./components/Categories";
 
@@ -46,6 +47,9 @@ function App() {
         <Route exact path="/categories">
           <Categories />
         </Route>
+        <Route path="/">
+            <Error />
+          </Route>
       </Switch>
       <div className="App_footer">
         <p>NC Board Game Reviews - Author Richard Noble</p>
