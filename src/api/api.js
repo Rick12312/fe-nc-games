@@ -49,3 +49,7 @@ export const getCommentsByReviewId = async (review_id) => {
     console.log(data.comments)
     return data.comments
 }
+
+export const postComments = async (review_id, username, body) => {
+    
+}
