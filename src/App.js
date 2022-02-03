@@ -7,8 +7,6 @@ import Header from "./components/Header";
 import Users from "./components/Users";
 import Error from "./components/Error";
 import SingleReview from "./components/SingleReview";
-import Categories from "./components/Categories";
-import Login from "./components/Login";
 import Category from "./components/Category";
 
 function App() {
@@ -46,12 +44,7 @@ function App() {
         <Route exact path="/reviews">
           <SingleReview />
         </Route>
-        <Route exact path="/categories">
-          <Categories />
-        </Route>
-        <Route exact path="/login">
-          <Login logIn={logIn} user={user} logOut={logOut} />
-        </Route>
+
         <Route exact path="/category">
           <Category />
         </Route>

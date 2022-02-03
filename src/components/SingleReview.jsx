@@ -8,7 +8,7 @@ import {
   deleteComment,
 } from "../api/api";
 import { BsHandThumbsUp } from "react-icons/bs";
-import { FaRegCommentDots, FaVuejs } from "react-icons/fa";
+import { FaRegCommentDots } from "react-icons/fa";
 
 const SingleReview = () => {
   const [reviewId, setReviewId] = useState(1);
@@ -71,23 +71,6 @@ const SingleReview = () => {
 
   return (
     <div className="SingleReview">
-      {/* <div className="SingleReview_changeReview_Buttons">
-        <button
-          className="SingleReview_previousReview_Button"
-          disabled={reviewId <= 1}
-          onClick={() => changeReview(-1)}
-        >
-          {" "}
-          Previous Review
-        </button>
-        <button
-          className="SingleReview_nextReview_Button"
-          disabled={reviewId >= 24}
-          onClick={() => changeReview(1)}
-        >
-          Next Review
-        </button>
-      </div> */}
       <div className="SingleReview_review_container">
         <img
           className="SingleReview_review_img"

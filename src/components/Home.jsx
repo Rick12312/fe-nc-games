@@ -21,8 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <div id="Home_sortby_container">   
-        
+      <div id="Home_sortby_container">
         <button className="Home_sortby_button" onClick={() => setSort("votes")}>
           Votes
           <FcGenericSortingDesc />
@@ -58,9 +57,19 @@ const Home = () => {
                 <p>
                   <i>{review.category}</i>
                 </p>
-                  <p className="Home_reviews__list_item_date">{review.created_at.slice(0,10)} 
-                  </p>
-                <p><span><FaRegCommentDots /> {"  "}</span>{review.comment_count} <span><BsHandThumbsUp />{" "} </span>{review.votes}</p>
+                <p className="Home_reviews__list_item_date">
+                  {review.created_at.slice(0, 10)}
+                </p>
+                <p>
+                  <span>
+                    <FaRegCommentDots /> {"  "}
+                  </span>
+                  {review.comment_count}{" "}
+                  <span>
+                    <BsHandThumbsUp />{" "}
+                  </span>
+                  {review.votes}
+                </p>
               </div>
             </li>
           );

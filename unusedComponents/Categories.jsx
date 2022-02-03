@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { getCategories, getReviewsByCategory, fetchSortedCategoryReviews } from "../api/api";
+import { getCategories, getReviewsByCategory, fetchSortedCategoryReviews } from "../src/api/api";
 import { FcGenericSortingDesc, FcComments } from "react-icons/fc";
 import { BsCalendarDate } from "react-icons/bs";
 

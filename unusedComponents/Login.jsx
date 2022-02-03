@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getUsers } from '../api/api.js'
+import { getUsers } from '../src/api/api.js'
 
 const Login = ({ logIn, user }) => {
 const [logInValue, setLoginValue] = useState("");
