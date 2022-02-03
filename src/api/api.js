@@ -50,7 +50,15 @@ export const getCommentsByReviewId = async (review_id) => {
 }
 
 export const postComments = async (review_id, username, body) => {
-    console.log(review_id, body, username, { username: `${username}`, body: `${body}`})
     const { data } = await gamesAPI.post(`/reviews/${review_id}/comments`, { username: `${username}`, body: `${body}`})
     return data.comment
+}
+
+export const deleteComment = async (comment_id) => {
+    const { data } = await gamesAPI.delete(`/comments/${comment_id}`)
+}
+
+export const fetchSortedCategoryReviews = async (sort, category) => {
+    const { data } = await gamesAPI.get(`/reviews/?category=${category}&sort_by=${sort}`)
+    return data.reviews
 }

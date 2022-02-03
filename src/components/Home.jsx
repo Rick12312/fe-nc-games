@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getReviewsBySort } from "../api/api.js";
 import { FcGenericSortingDesc, FcComments } from "react-icons/fc";
 import { BsCalendarDate } from "react-icons/bs";
+import { BsHandThumbsUp } from "react-icons/bs";
+import { FaRegCommentDots } from "react-icons/fa";
 
 const Home = () => {
   const [reviews, setReviews] = useState([]);
@@ -51,11 +53,15 @@ const Home = () => {
                 src={review.review_img_url}
                 alt="review.title"
               />
-              <p>Title: {review.title.slice(0, 35)}</p>
-              <p>Category: {review.category}</p>
-              <p>Date: {review.created_at}</p>
-              <p>Comment count: {review.comment_count}</p>
-              <p>Votes: {review.votes}</p>
+              <div className="Home_reviews__list_item_text">
+                <h3>{review.title.slice(0, 35)}</h3>
+                <p>
+                  <i>{review.category}</i>
+                </p>
+                  <p className="Home_reviews__list_item_date">{review.created_at.slice(0,10)} 
+                  </p>
+                <p><span><FaRegCommentDots /> {"  "}</span>{review.comment_count} <span><BsHandThumbsUp />{" "} </span>{review.votes}</p>
+              </div>
             </li>
           );
         })}
