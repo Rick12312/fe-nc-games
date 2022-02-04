@@ -13,8 +13,6 @@ const Users = ({ logIn, user }) => {
     getUsersByUsername(username).then((user) => {
       setUsername(user);
     });
-          
-    
   }, [username]);
 
   const onSubmit = (e) => {
@@ -22,7 +20,6 @@ const Users = ({ logIn, user }) => {
     getUsersByUsername(username).then((user) => {
       setUsername(user);
     });
-    
   };
 
   return (

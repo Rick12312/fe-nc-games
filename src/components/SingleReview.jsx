@@ -9,6 +9,7 @@ import {
 } from "../api/api";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { FaRegCommentDots } from "react-icons/fa";
+import { GrPrevious, GrNext } from 'react-icons/gr'
 
 const SingleReview = () => {
   const [reviewId, setReviewId] = useState(1);
@@ -84,14 +85,17 @@ const SingleReview = () => {
             onClick={() => changeReview(-1)}
           >
             {" "}
-            Previous Review
+            <GrPrevious />
+            <p className="SingleReview_changeReview_Buttons_text">Previous</p>
           </button>
+          <div className="SingleReview_review_button_divider"><p></p></div>
           <button
             className="SingleReview_nextReview_Button"
             disabled={reviewId >= 24}
             onClick={() => changeReview(1)}
           >
-            Next Review
+            <GrNext/>
+            <p className="SingleReview_changeReview_Buttons_text">Next</p>
           </button>
         </div>
         <div className="SingleReview_review_text">

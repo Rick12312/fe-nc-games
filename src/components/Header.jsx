@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../images/logo.png";
 
-const Header = ({ logIn, user }) => {
+const Header = ({ user }) => {
   return (
     <header className="Header">
       <img src={logo} alt="logo" height="300px" width="300px" />

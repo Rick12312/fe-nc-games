@@ -44,7 +44,6 @@ function App() {
         <Route exact path="/reviews">
           <SingleReview />
         </Route>
-
         <Route exact path="/category">
           <Category />
         </Route>
