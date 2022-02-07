@@ -18,8 +18,8 @@ const SingleReview = () => {
   const [loading, setIsLoading] = useState(true);
   const [body, setBody] = useState("");
   const [username, setUsername] = useState("");
-  const [error, setError] = useState(false);
-  const [commentId, setCommentId] = useState("");
+  const [setError] = useState(false);
+  const [commentId] = useState("");
 
   useEffect(() => {
     setIsLoading(false);
@@ -86,7 +86,6 @@ const SingleReview = () => {
           >
             {" "}
             <GrPrevious />
-            <p className="SingleReview_changeReview_Buttons_text">Previous</p>
           </button>
           <div className="SingleReview_review_button_divider"><p></p></div>
           <button
@@ -95,7 +94,6 @@ const SingleReview = () => {
             onClick={() => changeReview(1)}
           >
             <GrNext/>
-            <p className="SingleReview_changeReview_Buttons_text">Next</p>
           </button>
         </div>
         <div className="SingleReview_review_text">

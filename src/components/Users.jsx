@@ -4,7 +4,6 @@ import { getUsers, getUsersByUsername } from "../api/api.js";
 const Users = ({ logIn, user }) => {
   const [users, setUsers] = useState([]);
   const [username, setUsername] = useState("tickle122");
-  const [logInValue, setLoginValue] = useState("");
 
   useEffect(() => {
     getUsers().then((userList) => {
