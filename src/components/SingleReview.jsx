@@ -5,37 +5,35 @@ import {
   patchVotes,
   getCommentsByReviewId,
   postComments,
-  deleteComment,
 } from "../api/api";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { FaRegCommentDots } from "react-icons/fa";
-import { GrPrevious, GrNext } from 'react-icons/gr'
+import { GrPrevious, GrNext } from 'react-icons/gr';
+import { useParams } from 'react-router-dom'
 
 const SingleReview = () => {
-  const [reviewId, setReviewId] = useState(1);
-  const [review, setReview] = useState("");
+  const [review, setReview] = useState({});
   const [comments, setComments] = useState("");
-  const [loading, setIsLoading] = useState(true);
   const [body, setBody] = useState("");
   const [username, setUsername] = useState("");
-  const [setError] = useState(false);
-  const [commentId] = useState("");
+  const [error, setError] = useState(false);
+  const [loading, setIsLoading] = useState(false);
+  let { id } = useParams();
 
+  console.log("id set")
+  
   useEffect(() => {
     setIsLoading(false);
-    getReviewsById(reviewId).then((review) => {
+    getReviewsById(id).then((review) => {
       setReview(review);
-    });
-  }, [reviewId]);
-
-  useEffect(() => {
-    getCommentsByReviewId(reviewId).then((comment) => {
+    })
+    getCommentsByReviewId(id).then((comment) => {
       setComments(comment);
     });
-  }, [reviewId, comments]);
+  }, [id]);
 
   const onClick = () => {
-    patchVotes(reviewId)
+    patchVotes(id)
       .then((review) => {
         setReview(review);
       })
@@ -43,7 +41,7 @@ const SingleReview = () => {
   };
 
   const fetchComments = () => {
-    getCommentsByReviewId(reviewId)
+    getCommentsByReviewId(id)
       .then((comment) => {
         setComments(comment);
       })
@@ -52,24 +50,20 @@ const SingleReview = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    postComments(reviewId, username, body)
+    postComments(id, username, body)
       .then(() => {
         setComments("");
       })
       .catch(setError(true));
   };
 
-  const removeComment = (e) => {
-    e.preventDefault();
-    deleteComment(commentId);
-  };
-
   const changeReview = (num) => {
-    setReviewId(reviewId + num);
+  console.log(id,"ID")
+    id = parseInt(id) + num
   };
 
   if (loading) return <p>Loading...</p>;
-
+  
   return (
     <div className="SingleReview">
       <div className="SingleReview_review_container">
@@ -81,7 +75,7 @@ const SingleReview = () => {
         <div className="SingleReview_changeReview_Buttons">
           <button
             className="SingleReview_previousReview_Button"
-            disabled={reviewId <= 1}
+            disabled={id <= 1}
             onClick={() => changeReview(-1)}
           >
             {" "}
@@ -90,7 +84,7 @@ const SingleReview = () => {
           <div className="SingleReview_review_button_divider"><p></p></div>
           <button
             className="SingleReview_nextReview_Button"
-            disabled={reviewId >= 24}
+            disabled={id >= 24}
             onClick={() => changeReview(1)}
           >
             <GrNext/>
@@ -152,9 +146,7 @@ const SingleReview = () => {
                     <span className="SingleReview_comments_created_at">
                       Posted {comment.created_at.slice(0, 10)}
                     </span>
-                    <span className="SingleReview_comments_comment_id">
-                      Comment ID: {comment.comment_id}
-                    </span>
+                    
                   </p>
                   <p>{comment.body}</p>
                   <p key={comment.comment_id}>Votes: {comment.votes}</p>

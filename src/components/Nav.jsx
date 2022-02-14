@@ -10,7 +10,7 @@ const Nav = () => {
       <Link className="Nav_link" to="/users">
         Login
       </Link>
-      <Link className="Nav_link" to="/reviews">
+      <Link className="Nav_link" to='/reviews/1'>
         Reviews
       </Link>
       <Link className="Nav_link" to="/category">

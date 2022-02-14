@@ -41,7 +41,7 @@ function App() {
         <Route exact path="/users">
           <Users logIn={logIn} user={user} logOut={logOut} />
         </Route>
-        <Route exact path="/reviews">
+        <Route path="/reviews/:id">
           <SingleReview />
         </Route>
         <Route exact path="/category">

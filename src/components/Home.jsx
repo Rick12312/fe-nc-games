@@ -4,8 +4,11 @@ import { FcGenericSortingDesc, FcComments } from "react-icons/fc";
 import { BsCalendarDate } from "react-icons/bs";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { FaRegCommentDots } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
+
 
 const Home = () => {
+  const history = useHistory()
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sort, setSort] = useState("votes");
@@ -46,7 +49,7 @@ const Home = () => {
       <ul className="Home">
         {reviews.map((review) => {
           return (
-            <li className="Home_reviews__list_item" key={review.review_id}>
+            <li onClick={() => history.push(`/reviews/${review.review_id}`)}className="Home_reviews__list_item" key={review.review_id}>
               <img
                 className="Home_reviews_img"
                 src={review.review_img_url}

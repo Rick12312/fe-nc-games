@@ -263,9 +263,9 @@
 
 .SingleReview_review_container {
   box-shadow: 5px 5px 20px rgb(199, 197, 197);
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   min-width: 70vw;
   max-width: 70vw;
   text-align: left;
@@ -307,6 +307,7 @@
   display: inline-block;
   min-width: 70vw;
   max-width: 70vw;
+  margin-top:5px;
   margin-bottom: 20px;
   text-align: left;
   opacity: 0.8;
