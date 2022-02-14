@@ -1,12 +1,12 @@
 # NC Board Game Reviews
 
-URL - `https://fe-nc-games.netlify.app/`
-
 This website allows users to view board game reviews, vote and post comments.
 
 This project was created in React single-page application using my back-end boardgames API which can be found -
 
 `https://github.com/Rick12312/be-nc-games/`
+
+URL - `https://fe-nc-games.netlify.app/`
 
 ## Step 1 - Cloning down the repo
 
@@ -26,5 +26,6 @@ In the project directory, you can run:
 
 ## Step 3 - Requirements
 
-Minimum versions of Node required to run it locally
+Minimum version of Node required to run the project -
+
 Node JS - `v17.0.1`
