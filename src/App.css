@@ -180,158 +180,6 @@ hr {
   align-items: left;
 }
 
-/*------------ SINGLE REVIEW ------------*/
-
-.SingleReview {
-  padding: 10px;
-  background-color: #f1f1f1;
-  color: #333;
-}
-
-.SingleReview_changeReview_Buttons {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.SingleReview_changeReview_Buttons:hover {
-  color: #333;
-  font-weight: bold;
-}
-
-.SingleReview_previousReview_Button {
-  display: flex;
-  border: 0px;
-}
-
-.SingleReview_nextReview_Button {
-  display: flex;
-  border: 0px;
-}
-
-.SingleReview_changeReview_Buttons {
-  display: flex;
-}
-
-.SingleReview_review_button_divider {
-  width: 800px;
-}
-
-.SingleReview_nextReview_Button:hover {
-}
-
-.SingleReview_changeReview_Button {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.SingleReview_review_text_author {
-  font-size: x-small;
-}
-
-.SingleReview_review_container {
-  box-shadow: 5px 5px 20px rgb(199, 197, 197);
-  /* border: 1px solid black; */
-  margin-top: 10px;
-  margin-bottom: 13px;
-  min-width: 70vw;
-  max-width: 70vw;
-  text-align: left;
-  display: inline-block;
-}
-
-.SingleReview_review_img {
-  min-width: 100%;
-  max-width: 100%;
-  max-height: 40vh;
-  object-fit: cover;
-  align-items: center;
-}
-
-.SingleReview_review_text {
-  margin-left: 10px;
-}
-
-.SingleReview_buttons {
-  margin-bottom: 10px;
-}
-
-.SingleReview_review_vote_button {
-  border: 0;
-}
-
-.SingleReview_review_showComments_button {
-  border: 0;
-}
-
-.SingleReview_comments {
-  display: grid;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.SingleReview_comments_container {
-  box-shadow: 5px 5px 20px rgb(255, 255, 255);
-  display: inline-block;
-  min-width: 70vw;
-  max-width: 70vw;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  text-align: left;
-  opacity: 0.8;
-  border-radius: 15px 15px 15px 0px;
-}
-
-.SingleReview_comments_created_at {
-  font-size: x-small;
-  margin-left: 5px;
-}
-
-.SingleReview_comments_comment_id {
-  font-size: x-small;
-  margin-left: 5px;
-}
-
-.SingleReview_comments_text {
-  margin-left: 10px;
-}
-
-.SingleReview_comments_inputbox {
-  width: 100%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
-}
-
-.SingleReview_comments_add_title {
-  text-align: left;
-}
-
-.SingleReviews_postReview_form {
-  display: block;
-  justify-content: left;
-}
-
-.SingleReview_comments_post_button {
-  display: inline-block;
-  justify-content: left;
-}
-
-/*------------ LOGIN ------------------*/
-
-.Login {
-  background-color: #f1f1f1;
-  padding: 10px;
-  justify-content: center;
-}
-
-.Login_form {
-  align-items: center;
-}
-
 /*------------- CATEGORY --------------*/
 
 .Category_Button_Cotainer {
@@ -389,31 +237,12 @@ hr {
   padding-right: 10px;
 }
 
-.Category_Container_Row1 {
-}
-
 .Category_Container_Text h1 {
   text-align: center;
 }
 
 .Category_Button:hover {
   opacity: 0.7;
-}
-
-.Category_Review_Card {
-  box-shadow: 5px 5px 20px rgb(143, 137, 137);
-  border-radius: 15px 15px 15px 0px;
-  min-width: 250px;
-  max-width: 275px;
-  min-height: 350px;
-  max-height: 350px;
-  width: 100%;
-  background-color: rgb(122, 122, 122);
-  color: white;
-  margin: 0.5rem;
-  font-size: small;
-  text-align: left;
-  list-style-type: none;
 }
 
 .Catergory__review_list {
@@ -430,6 +259,10 @@ hr {
   font-size: small;
   text-align: left;
   list-style-type: none;
+}
+
+.Catergory__review_list:hover {
+  opacity: 0.5;
 }
 
 .Category_review_img {

@@ -10,8 +10,10 @@ import boardgame7 from "../images/boardgame5.jpeg";
 
 import { BsHandThumbsUp } from "react-icons/bs";
 import { FaRegCommentDots } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 
 function Category() {
+  const history = useHistory()
   const [category, setCategory] = useState("strategy");
   const [review, setReview] = useState([]);
 
@@ -81,7 +83,7 @@ function Category() {
             <>
               {review.map((review) => {
                 return (
-                  <li className="Catergory__review_list" key={review.review_id}>
+                  <li onClick={() => history.push(`/review/${review.review_id}`)} className="Catergory__review_list" key={review.review_id}>
                     <img
                       className="Category_review_img"
                       src={review.review_img_url}
@@ -116,7 +118,7 @@ function Category() {
             <>
               {review.map((review) => {
                 return (
-                  <li className="Catergory__review_list" key={review.review_id}>
+                  <li onClick={() => history.push(`/review/${review.review_id}`)} className="Catergory__review_list" key={review.review_id}>
                     <img
                       className="Category_review_img"
                       src={review.review_img_url}
@@ -151,7 +153,7 @@ function Category() {
             <>
               {review.map((review) => {
                 return (
-                  <li className="Catergory__review_list" key={review.review_id}>
+                  <li onClick={() => history.push(`/review/${review.review_id}`)} className="Catergory__review_list" key={review.review_id}>
                     <img
                       className="Category_review_img"
                       src={review.review_img_url}
@@ -186,7 +188,7 @@ function Category() {
             <>
               {review.map((review) => {
                 return (
-                  <li className="Catergory__review_list" key={review.review_id}>
+                  <li onClick={() => history.push(`/review/${review.review_id}`)} className="Catergory__review_list" key={review.review_id}>
                     <img
                       className="Category_review_img"
                       src={review.review_img_url}
@@ -221,7 +223,7 @@ function Category() {
             <>
               {review.map((review) => {
                 return (
-                  <li className="Catergory__review_list" key={review.review_id}>
+                  <li onClick={() => history.push(`/review/${review.review_id}`)} className="Catergory__review_list" key={review.review_id}>
                     <img
                       className="Category_review_img"
                       src={review.review_img_url}
@@ -256,7 +258,7 @@ function Category() {
             <>
               {review.map((review) => {
                 return (
-                  <li className="Catergory__review_list" key={review.review_id}>
+                  <li onClick={() => history.push(`/review/${review.review_id}`)} className="Catergory__review_list" key={review.review_id}>
                     <img
                       className="Category_review_img"
                       src={review.review_img_url}
@@ -291,7 +293,7 @@ function Category() {
             <>
               {review.map((review) => {
                 return (
-                  <li className="Catergory__review_list" key={review.review_id}>
+                  <li onClick={() => history.push(`/review/${review.review_id}`)} className="Catergory__review_list" key={review.review_id}>
                     <img
                       className="Category_review_img"
                       src={review.review_img_url}
