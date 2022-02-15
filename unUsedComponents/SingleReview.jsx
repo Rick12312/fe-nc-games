@@ -40,19 +40,19 @@ const SingleReview = () => {
       .catch(setError(true));
   };
 
-  const fetchComments = () => {
-    getCommentsByReviewId(id)
-      .then((comment) => {
-        setComments(comment);
-      })
-      .catch(setError(true));
-  };
+  // const fetchComments = () => {
+  //   getCommentsByReviewId(id)
+  //     .then((comment) => {
+  //       setComments(comment);
+  //     })
+  //     .catch(setError(true));
+  // };
 
   const submitForm = (e) => {
     e.preventDefault();
     postComments(id, username, body)
       .then(() => {
-        setComments("");
+        
       })
       .catch(setError(true));
   };
@@ -122,7 +122,7 @@ const SingleReview = () => {
               )}{" "}
             </p>
           )}
-          <div className="SingleReview_buttons">
+          {/* <div className="SingleReview_buttons">
             {review.review_id && (
               <button
                 onClick={fetchComments}
@@ -131,7 +131,7 @@ const SingleReview = () => {
                 <FaRegCommentDots /> Show comments
               </button>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -164,7 +164,8 @@ const SingleReview = () => {
               type="text"
               placeholder="Enter your comment here..."
               required
-              onChange={(e) => {
+              onSubmit={(e) => {
+                console.log(id,username,body)
                 setBody(e.target.value);
                 setUsername(localStorage.getItem("loggedInUser"));
               }}

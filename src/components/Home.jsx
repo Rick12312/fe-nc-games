@@ -49,7 +49,7 @@ const Home = () => {
       <ul className="Home">
         {reviews.map((review) => {
           return (
-            <li onClick={() => history.push(`/reviews/${review.review_id}`)}className="Home_reviews__list_item" key={review.review_id}>
+            <li onClick={() => history.push(`/review/${review.review_id}`)}className="Home_reviews__list_item" key={review.review_id}>
               <img
                 className="Home_reviews_img"
                 src={review.review_img_url}

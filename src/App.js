@@ -6,8 +6,8 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Users from "./components/Users";
 import Error from "./components/Error";
-import SingleReview from "./components/SingleReview";
 import Category from "./components/Category";
+import Reviews from "./components/Reviews";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -41,8 +41,8 @@ function App() {
         <Route exact path="/users">
           <Users logIn={logIn} user={user} logOut={logOut} />
         </Route>
-        <Route path="/reviews/:id">
-          <SingleReview />
+        <Route path="/review/:id">
+          <Reviews />
         </Route>
         <Route exact path="/category">
           <Category />

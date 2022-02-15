@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   background-color: white;
 }
@@ -12,6 +12,12 @@
   text-align: center;
   background: #ddd;
   font-size: xx-small;
+}
+
+hr {
+  margin-left: 20px;
+  margin-right: 20px;
+  opacity: 0.2;
 }
 
 /*------------ HEADER ------------*/
@@ -37,7 +43,6 @@
 }
 
 .Nav_link {
-  
   color: white;
   padding: 14px 20px;
   text-decoration: none;
@@ -115,8 +120,8 @@
   border-radius: 15px 15px 15px 0px;
   min-width: 250px;
   max-width: 275px;
-  min-height:350px;
-  max-height:350px;
+  min-height: 350px;
+  max-height: 350px;
   width: 100%;
   background-color: rgb(122, 122, 122);
   color: white;
@@ -127,11 +132,11 @@
 }
 
 .Home_reviews__list_item_text {
-  padding:20px;
+  padding: 20px;
 }
 
 .Home_reviews__list_item:hover {
-  opacity: 0.5
+  opacity: 0.5;
 }
 
 .Home_reviews_img {
@@ -155,7 +160,7 @@
 .Users_container {
   background-color: #f1f1f1;
   padding: 10px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-content: center;
 }
@@ -175,42 +180,6 @@
   align-items: left;
 }
 
-/*------------ CATEGORIES ------------*/
-
-.Categories {
-  background-color: #f1f1f1;
-  margin-top: -14px;
-}
-
-
-.Catergories__review_list {
-  display: inline-block;
-  border-radius: 15px 15px 15px 0px;
-  /* min-width: 250px;
-  max-width: 90vw; */
-
-  max-width: 70vw;
-  width: 100%;
-  margin: 0.5rem;
-  font-size: small;
-  text-align: left;
-  list-style-type: none;
-}
-
-.Categories__review_img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.Catergory_select {
-  margin-top: 10px;
-}
-
 /*------------ SINGLE REVIEW ------------*/
 
 .SingleReview {
@@ -220,7 +189,7 @@
 }
 
 .SingleReview_changeReview_Buttons {
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
 }
 
@@ -230,32 +199,30 @@
 }
 
 .SingleReview_previousReview_Button {
-  display:flex;
+  display: flex;
   border: 0px;
 }
 
 .SingleReview_nextReview_Button {
-  display:flex;
+  display: flex;
   border: 0px;
 }
 
 .SingleReview_changeReview_Buttons {
-  display:flex;
+  display: flex;
 }
 
-.SingleReview_review_button_divider{
+.SingleReview_review_button_divider {
   width: 800px;
 }
 
 .SingleReview_nextReview_Button:hover {
-  
 }
 
 .SingleReview_changeReview_Button {
   background-color: #f1f1f1;
   color: black;
 }
-
 
 .SingleReview_review_text_author {
   font-size: x-small;
@@ -307,7 +274,7 @@
   display: inline-block;
   min-width: 70vw;
   max-width: 70vw;
-  margin-top:5px;
+  margin-top: 5px;
   margin-bottom: 20px;
   text-align: left;
   opacity: 0.8;
@@ -328,7 +295,6 @@
   margin-left: 10px;
 }
 
-
 .SingleReview_comments_inputbox {
   width: 100%;
   padding: 12px 20px;
@@ -345,15 +311,14 @@
 }
 
 .SingleReviews_postReview_form {
-  display:block;
+  display: block;
   justify-content: left;
 }
 
 .SingleReview_comments_post_button {
-  display:inline-block; 
+  display: inline-block;
   justify-content: left;
 }
-
 
 /*------------ LOGIN ------------------*/
 
@@ -402,10 +367,8 @@
 }
 
 .Category_Container {
-  /* display: flex; */
   align-content: center;
   justify-content: center;
-  /* width: 90vw; */
 }
 
 .Category_Container_Row {
@@ -413,13 +376,12 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  
 }
 
 .Category_Container_Image {
   object-fit: cover;
-  min-width:25%;
-  min-height:30%;
+  min-width: 25%;
+  min-height: 30%;
   max-width: 25%;
   max-height: 30%;
   border-radius: 10%;
@@ -430,8 +392,6 @@
 .Category_Container_Row1 {
 }
 
-
-
 .Category_Container_Text h1 {
   text-align: center;
 }
@@ -440,14 +400,13 @@
   opacity: 0.7;
 }
 
-
 .Category_Review_Card {
   box-shadow: 5px 5px 20px rgb(143, 137, 137);
   border-radius: 15px 15px 15px 0px;
   min-width: 250px;
   max-width: 275px;
-  min-height:350px;
-  max-height:350px;
+  min-height: 350px;
+  max-height: 350px;
   width: 100%;
   background-color: rgb(122, 122, 122);
   color: white;
@@ -462,8 +421,8 @@
   border-radius: 15px 15px 15px 0px;
   min-width: 250px;
   max-width: 275px;
-  min-height:350px;
-  max-height:350px;
+  min-height: 350px;
+  max-height: 350px;
   width: 100%;
   background-color: rgb(122, 122, 122);
   color: white;
@@ -485,7 +444,72 @@
 }
 
 .Catergory__review_list_text {
-  padding:20px;
+  padding: 20px;
+}
+
+/*------------ REVIEW ------------*/
+
+.Review {
+  justify-content: center;
+}
+
+.Review_Card {
+  justify-content: center;
+  box-shadow: 5px 5px 20px rgb(143, 137, 137);
+  border-radius: 15px 15px 15px 0px;
+  background-color: rgb(122, 122, 122);
+  color: white;
+  font-size: medium;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.Review_Card_Image {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 40vh;
+  object-fit: cover;
+  align-items: center;
+}
+
+.Review_Card_Element {
+  padding: 10px;
+}
+
+.Review_Card_Signature {
+  font-size: small;
+  padding: 10px;
+}
+
+.Review_Card_Upvote_Btn {
+  background-color: rgb(122, 122, 122);
+  border: 0px;
+  color: white;
+  padding: 10px;
+}
+
+.Review_Comments_Card {
+  border-radius: 15px 15px 15px 0px;
+  opacity: 0.8;
+  background-color: rgb(122, 122, 122);
+  color: white;
+  font-size: small;
+  text-align: left;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.Review_Comments_Textarea {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
 }
 
 /*------------ MEDIA QUERY ------------*/
@@ -500,6 +524,14 @@
   }
 
   .Category_Container_Column {
-    width: 100%;
+    box-shadow: 5px 5px 20px rgb(255, 255, 255);
+    display: inline-block;
+    min-width: 70vw;
+    max-width: 70vw;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+    opacity: 0.8;
+    border-radius: 15px 15px 15px 0px;
   }
 }

@@ -4,7 +4,7 @@ This website allows users to view board game reviews, vote and post comments.
 
 This project was created in React single-page application using my back-end boardgames API which can be found -
 
-`https://github.com/Rick12312/be-nc-games/`
+`https://github.com/Rick12312/backend-nc-games/`
 
 URL - `https://fe-nc-games.netlify.app/`
 
@@ -12,7 +12,7 @@ URL - `https://fe-nc-games.netlify.app/`
 
 Clone the repo using the following command
 
-`https://github.com/Rick12312/`
+`https://github.com/Rick12312/fe-nc-games/`
 
 ## Step 2 - Setup
 
@@ -22,7 +22,7 @@ To install required dependencies -
 
 In the project directory, you can run:
 
-`npm start` and to view it, open `http://localhost:3000` in the browser.
+`npm start` and open `http://localhost:3000` in the browser.
 
 ## Step 3 - Requirements
 
