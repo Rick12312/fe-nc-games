@@ -13,7 +13,8 @@ const Reviews = () => {
   const [comments, setComments] = useState("");
   const [body, setBody] = useState("");
   const [username, setUsername] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [clicked, setClicked] = useState(false);
   let { id } = useParams();
 
   console.log(review.comment_count);
@@ -30,16 +31,21 @@ const Reviews = () => {
   }, [id, isSubmitted]);
 
   const onClick = () => {
-    patchVotes(id).then((review) => {
-      setReview(review);
-    });
+    if(!clicked){
+      patchVotes(id).then((review) => {
+        setReview(review);
+        setClicked(true);
+      });
+    } else {
+      return alert("You can only vote once")
+    }
   };
 
   const submitForm = (e) => {
     console.log(id, username, body);
     e.preventDefault();
     postComments(id, username, body).then(() => {
-      setIsSubmitted(true)
+      setIsSubmitted(true);
     });
   };
 
